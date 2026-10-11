@@ -1,0 +1,17 @@
+On branch hw_1a
+Your branch is up to date with 'origin/hw_1a'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   samplit-cocoyeh39.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	sampli-cocoyeh39.py
+	samplit-cocoyeh39.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
