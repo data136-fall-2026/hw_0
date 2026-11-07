@@ -58,7 +58,6 @@ class Course(models.Model):
     """
     name = models.CharField(max_length=100)
     instructor = models.ForeignKey(InstructorProfile, on_delete=models.CASCADE)
-    quarter = models.CharField(max_length=20)  # "Autumn 2026"
     meeting_days = models.CharField(max_length=10)  # "MWF" or "TR"
     time_start = models.TimeField()
     time_end = models.TimeField()
@@ -108,5 +107,12 @@ class QRCodeUpload(models.Model):
 # Helper / API functions
 # ---------------------------------------------------------------------------
 
+def is_instructor(user):
+    """Check if the user is an instructor."""
+    return user.is_authenticated and InstructorProfile.objects.filter(user=user).exists()
+
+def is_student(user):
+    """Check if the user is a student."""
+    return user.is_authenticated and StudentProfile.objects.filter(user=user).exists()
 
 
